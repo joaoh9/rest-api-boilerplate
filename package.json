@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/starter.js"
+    "start": "nodemon -r dotenv/config src/starter.js "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.9.20",
+    "nodemon": "2.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "8.2.0"
   }
 }

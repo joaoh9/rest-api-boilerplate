@@ -5,7 +5,6 @@ const { HttpResponses } = require("../../helper");
 module.exports = () => ({
   save(req, res) {
     const rh = new HttpResponses(req, res);
-    console.log(req)
     bo.save(req.body).then(rh.ok).catch(rh.error);
   },
   getAll(req, res) {
