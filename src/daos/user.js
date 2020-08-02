@@ -5,7 +5,7 @@ const modelParser = require('../models/modelParser')
 
 module.exports = () => {
   const doNotShow = {
-    _v: false
+    __v: false
   }
   return {
     save(entity) {
