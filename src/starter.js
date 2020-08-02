@@ -1,15 +1,10 @@
-const express = require('express')
-const controllers = require('./api/routes')
+const Logger = require('./config/logger')
+const logger = Logger('[Starter]')
 
-const settings = require('./config')
+require('./config/database')();
 
-require('./mongose')()
+const start = () => {
+  logger.info('starting system');
+}
 
-const app = express();
-
-app.use(express.json())
-app.use('/v1/users', controllers.users.router)
-
-app.listen(settings.db.port, () => {
-  console.log(`Listening on port ${settings.db.port}`)
-})
+module.exports = start();
