@@ -13,14 +13,10 @@ module.exports = function() {
       type: String,
       required: true
     },
-    skills: [{
-      name: {
-        type: String
-      },
-      group: {
-        type: String
-      }
-    }]
+    username: {
+      type: String,
+      required: true
+    }
   })
 
   model = model ? model : mongoose.model('users', schema);
