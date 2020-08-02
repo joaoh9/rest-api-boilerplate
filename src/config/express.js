@@ -1,6 +1,9 @@
 const express = require('express')
 const controllers = require('../api/routes')
 
+const Logger = require('./logger')
+const logger = Logger('[Express]')
+
 const settings = require('./settings')
 
 require('./database')()
@@ -12,6 +15,6 @@ module.exports = function () {
   app.use('/v1/users', controllers.users.router)
 
   app.listen(settings.servicePort, () => {
-    console.log(`Listening on port ${settings.servicePort}`)
+    logger.info(`Listening on port ${settings.servicePort}`)
   })
 }

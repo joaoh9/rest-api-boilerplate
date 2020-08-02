@@ -1,7 +1,7 @@
 const Logger = require('./config/logger')
 const logger = Logger('[Starter]')
 
-require('./config/database')();
+require('./config/express')()
 
 const start = () => {
   logger.info('starting system');
